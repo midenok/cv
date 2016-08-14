@@ -1,0 +1,84 @@
+
+	NWN Dialog Transformation v0.1
+
+	INTRODUCTION
+
+This tool is primarily intended to make life easier when editing many
+Neverwinter Nights DLG files which have some identical parts in them. Tool 
+can convert DLG file to convenient XML form where dialog is represented 
+by hierarchical tree. Any node of that tree can be separated into 
+different file, thus making possible to edit common node once and apply it 
+to many dialogs. After editing have done tool can convert XML back to DLG.
+
+
+	INSTALLATION
+
+For successful work with this tool you will need:
+
+* modpacker (http://sourceforge.net/project/showfiles.php?group_id=80177)
+* any XSL 1.0 transformator (Saxon seems to be excellent choice)
+* GNU make
+* GNU rm, cp, touch
+
+If you are on win32 platform and don't have GNU Unix utilities, you can 
+acquire minimal and sufficient set of them at http://unxutils.sourceforge.net/
+
+Edit 'makefile' according to your system. Please, pay attention to 
+following variables:
+
+* GFF2XML, XML2GFF: you will need to append the path there if you don't have 
+  these utilites on PATH environment variable.
+* XSLT: XSL proccessor program with any arguments. If wish to you use Java 
+  program such as Saxon, please edit CLASSPATH variable to the right 
+  value. You will need to 'export' it.
+* XSL_PARSE: Defines right command-line syntax for XSL processor. Don't 
+  touch it if you use Saxon or Sablotron.
+* DLGDIR: Directory from which working DLG files will be taken. Also 
+  'make install' updates DLG files there.
+
+
+ 	USAGE TIPS
+ 	
+* Converted XML files are placed in 'in' dir.
+* Converted DLG files are placed in 'out' dir.
+* Before editing XML file, copy it in 'in/..' (project root) dir. DLG 
+  generation takes XML files from there, not from 'in' dir.
+* You can rename XML files. Generated DLG will be named same as source DLG,
+  filename will be taken from XML source.
+* Do not name XML include files with '.xml' extension. Instead use something 
+  like '.xml.i'. Otherwise you will get an error from 'make dlg' in case 
+  you placed your include in project root.
+ 	
+	USAGE EXAMPLES
+
+'make xml': Convert all DLG files to XML and place them in $(INDIR).
+'make dlg': Convert all XML files to DLG and place them in $(OUTDIR).
+'make': Same as 'make dlg'.
+'make install': Do 'make dlg', then install DLG files from $(OUTDIR) to 
+                $(DLGDIR).
+'make nw_hen_sha.xml': Convert $(DLGDIR)/nw_hen_sha.dlg to 
+                       $(INDIR)/nw_hen_sha.xml
+'make sharwyn.dlg': Convert ./sharwyn.xml to $(OUTDIR)/nw_hen_sha.dlg (or 
+                    whatever DLG filename is set in sharwyn.xml)
+'make sharwyn': If there is ./sharwyn.xml 'make sharwyn.dlg'. Otherwise if 
+                there is $(DLGDIR)/sharwyn.dlg 'make sharwyn.xml' then.
+
+	
+	XML TAGS (Sorry, no time for writing DTD yet)
+	
+<nwndialog>: Document root element.
+<e id="(non-null)">: Entry phrase. This is what NPC says. Id attribute is 
+                     required for successful DLG generation.
+<r id="(non-null)">: Reply phrase. This is what PC says. Id attribute is 
+                     required for successful DLG generation.
+<le href="entry_id"/>: Link to entry phrase.
+<lr href="reply_id"/>: Link to reply phrase.
+<include file="include.xml.i"/>: Includes 'include.xml.i' replacing this 
+                                 tag.
+
+For complete set of attributes see generated XML or dialog.xsl source.
+
+
+	AUTHOR
+	
+v00d00 (asm[AT]kemcity.ru)

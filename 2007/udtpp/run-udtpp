@@ -1,0 +1,12 @@
+#!/bin/bash
+UDTPP=./udtpp
+$UDTPP -c localhost:8888 > log/client.log &
+CLIENT_PID=$!
+echo client at pid: $CLIENT_PID
+$UDTPP -s 192.168.100.254:3128 > log/server.log &
+SERVER_PID=$!
+echo server at pid: $SERVER_PID
+read
+echo killing $CLIENT_PID $SERVER_PID
+kill $CLIENT_PID $SERVER_PID
+#./check-output log

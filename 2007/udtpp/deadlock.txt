@@ -1,0 +1,11 @@
+3  F 2->PUdtMuxer::RequestShutdown(udtmuxer.cpp:230): Locked atomic_request
+3  G 56->PTcpTransport::RecieveLoop(tcptransp.cpp:91): TCP connection shutdown
+3  G 2->PUdtMuxer::RequestShutdown(udtmuxer.cpp:230): Locking atomic_request   (holded by E)
+4  B 2->PUdtMuxer::Reply(udtmuxer.cpp:202): shutting down channel 51
+3  B 2->PUdtMuxer::ShutdownChannel(udtmuxer.cpp:256): Locked atomic_shutdown
+3  B 56->PTcpTransport::ShutdownThread(tcptransp.cpp:125): Locking mThreadRunning (holded by G)
+3  E 57->PTcpTransport::RecieveLoop(tcptransp.cpp:91): TCP connection shutdown
+3  E 2->PUdtMuxer::RequestShutdown(udtmuxer.cpp:235): sending shutdown request for ch. 52
+3  F 2->PUdtMuxer::RequestShutdown(udtmuxer.cpp:239): Unlocked atomic_request
+3  E 2->PUdtMuxer::RequestShutdown(udtmuxer.cpp:230): Locked atomic_request
+3  E 2->PUdtMuxer::ShutdownChannel(udtmuxer.cpp:256): Locking atomic_shutdown (holded by B)

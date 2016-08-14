@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding="KOI8-R"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+	"/usr/share/sgml/docbook/dtd/xml/4.2/docbook.dtd">
+
+<book lang="ru">
+  <bookinfo>
+    <title>Резюме</title>
+    <subtitle>А. С. Миденков</subtitle>
+    <copyright>
+      <year>2006, 2007</year>
+      <holder>Aleksey Midenkov</holder>
+    </copyright>
+  </bookinfo>
+  <chapter id="ch1">
+      <title>Миденков Алексей Сергеевич</title>
+      <sect1 id="s1">
+        <title>Краткая информация</title>
+        <para>
+        <inlinemediaobject>
+            <imageobject>
+                <imagedata fileref="mid-cv.jpg" contentwidth="3cm" contentdepth="3cm" format="JPG"/>
+            </imageobject>
+        </inlinemediaobject>
+            <simplelist type="vert">
+            <member>Дата и место рождения: 18 августа 1978 г., город Кемерово</member>
+            <member>Телефон: +7 926 836 7100 (сотовый)</member>
+            <member>E-mail: asm@uezku.kemsu.ru; Jabber: sigil@jabber.ru; ICQ: 112156598</member>
+            <member>WWW:
+                <simplelist type="vert">
+                    <member><ulink url='http://midenkov.narod.ru/resume/'>Это резюме</ulink></member>
+                    <member><ulink url='http://www.weblancer.net/users/mid/'>Фриланс</ulink></member>
+                </simplelist>
+            </member>
+            <member>Образование: ТУСУР (г. Томск), специальность АСОиУ</member>
+            <member>Соционический тип: Логико-сенсорный экстраверт (ESTJ)</member>
+            </simplelist>
+        </para>
+        <para>
+            В поиске знаний, пытаясь охватить необъятное  постепенно приобретаешь способность выделять крупицы полезного среди огромной массы ненужного. Со временем этот навык превращается в особый вид мастерства.
+        </para>
+        <para>
+            Я не мотивирую себя тем, что я специалист в некоторой области и умею выполнять некоторый вид работы хорошо. Я делаю свою работу хорошо, но для меня гораздо важнее то, что эта работа полезна. Моя позиция -- жить подлинно, аутентично. Так я добиваюсь лучших результатов, нахожу выход в тяжелых ситуациях. Там, где кто-то начнёт сомневаться, я действую с уверенностью!
+        </para>
+      </sect1>
+      <sect1 id="s2">
+          <title>Интересуемые позиции</title>
+          <para>
+          <itemizedlist spacing="compact">
+              <listitem>Начальник отдела информационных технологий</listitem>
+              <listitem>Ведущий специалист</listitem>
+              <listitem>Ведущий программист</listitem>
+              <listitem>Координатор проекта</listitem>
+          </itemizedlist>
+        </para>
+      </sect1>
+      <sect1 id="s3">
+          <title>Опыт работы</title>
+          <para>8 лет в области программирования и системного администрирования.</para>
+          <para>Настроено порядка 20 серверов в сферах телекоммуникаций и управления ресурсами предприятия.
+              Разработаны прикладные программы автоматизации коммерческой торговли, управления сетевым трафиком,
+              работы с биллинговой системой.
+          </para>
+          <para>
+             <emphasis role="bold">с 2007 г.</emphasis>: программист, ООО "Передовые Интернет Решения", г. Москва,
+             Разработчик программного обеспечения
+          </para>
+          <para>
+              <emphasis role="bold">с 2005 г. по 2007 г.</emphasis>: ведущий инженер системного администрирования, МП ''УЕЗЖКУ'' г. Кемерово,
+              Центр начисления и сбора платежей (ЖКХ).
+          </para>
+          <para>
+              <emphasis role="bold">с 2003 г. по 2004 г.</emphasis>: инженер IP-телефонии, программист, ООО ''Е-Лайт-Телеком'', Кемерово, провайдер Интернет.
+          </para>
+          <para>
+              <emphasis role="bold">с 2002 г. по 2003 г.</emphasis>: системный администратор, программист, ООО ''Вэлта'', Кемерово, провайдер Интернет.
+          </para>
+          <para>
+              <emphasis role="bold">с 1998 г. по 2002 г.</emphasis>: программист, системный администратор, ООО ''ФиН-Трейд'', Кемерово, оптовая торговля ГСМ.
+          </para>
+      </sect1>
+      <sect1 id="s4">
+          <title>Навыки</title>
+          <para>
+              <itemizedlist spacing="compact">
+              <listitem>
+                  Опыт разработки приложений под UNIX: GLIBC, Posix Threads, Bison, FLex, Autoconf, Gnu Make, Gnu Readline, Perl, wxWidgets, Doxygen и пр.
+              </listitem>
+              <listitem>
+                  Опыт продвинутого программирования на С++: шаблоны, исключения, STL, iostream, паттерны
+              </listitem>
+              <listitem>
+                  Эрудиция и знания в области операционных систем: Linux 2.2, 2.4, 2.6; Windows NT/2k/XP/2k3
+              </listitem>
+              <listitem>
+                  Опыт администрирования UNIX-систем: iptables, iproute, Apache, Exim, Postfix, Samba, Spamassassin, Kolab, Squid, MySQL, PostgreSQL, Firebird, OpenLDAP, GnuGK, FreeRadius, LprNG, ipac-ng и пр.
+              </listitem>
+              <listitem>
+                  Знание принципов организации сетей Microsoft: ADS 2003, CIFS, SMB.
+              </listitem>
+              <listitem>
+                  Проектирование программных систем: UML, ER-диаграммы, Idef 0, 1, 1x, 3 (в теории).
+              </listitem>
+              </itemizedlist>
+          </para>
+      </sect1>
+      <sect1 id="s5">
+          <title>Личные качества</title>
+          <para>
+              <orderedlist spacing="compact">
+              <listitem>Честность и открытость</listitem>
+              <listitem>Ответственность</listitem>
+              <listitem>Коммуникабельность</listitem>
+              <listitem>Лидерство</listitem>
+              <listitem>Любознательность, экспериментирование, творческий подход к работе</listitem>
+              </orderedlist>
+          </para>
+      </sect1>
+      <sect1 id="s6">
+          <title>Интересы</title>
+          <para>
+            <itemizedlist spacing="compact">
+              <listitem>Автовождение, природа</listitem>
+              <listitem>Программирование, философия свободного ПО (FSF, GNU, Debian), хакинг, реверсинг</listitem>
+              <listitem>Самосовершенствование и здоровье: аутентизм, здоровый образ жизни</listitem>
+              <listitem>Английский язык</listitem>
+              <listitem>Кино, музыка</listitem>
+              <listitem>Экономика, политика, история; спот, форвард рынки валют, ценных бумаг</listitem>
+            </itemizedlist>
+          </para>            
+      </sect1>
+  </chapter>
+  <chapter id="ch2">
+      <title>Примеры работ</title>
+  <sect1 id="art1">
+    <title>C++, Threads, Sockets: Мультиплексор-демультиплексор TCP каналов через UDT (UDTPP)</title>
+        <para>Год: 2006</para>
+        <para><ulink url='http://midenkov.narod.ru/udtpp/doc/index.html'>Документация к проекту UDTPP</ulink></para>
+        <para>Включены все файлы проекта (<ulink url='udtpp/'>udtpp/</ulink>). Компилируемая рабочая версия.</para>
+
+        <para>
+        Приложение разработано на языке C++. Документация к проекту выполнена в системе Doxygen.
+        </para>
+
+        <para>
+        Дизайн приложения использует паттерны: Abstract, Aggregate, Container, Singleton, DesignContract,
+        LiterateProgramming и др.
+        </para>
+
+        <para>
+        В приложении используется технология многопоточного программирования блокирующих сокетов. Разработка
+        проекта ведётся под ОС Linux с последующим портированием в семейство ОС Windows NT.
+        </para>
+
+        <para>
+        Дизайн приложения интересен технологией отладки. В режиме DEBUG при помощи директив препроцессора вставляется
+        отладочный код, который выводит полную трассировку вызовов всех функций с указанием исполняемого потока,
+        имени класса вызываемого метода и имени самого метода. При возврате из функции в трейс выводится возвращаемое значение.
+        В трассировку также можно включить другую информацию, например действия с мутексами и семафорами.
+        Такой способ отладки позволяет легко находить дэдлоки и критические участки памяти в коде многопоточной программы.
+        </para>
+
+        <para>
+            Архитектура приложения требует доработки. Подробности <ulink url='http://midenkov.narod.ru/udtpp/doc/known_bugs.html'>здесь</ulink>.
+            Также рассматривается вариант использования библиотеки <ulink url='http://doc.trolltech.com/4.2/index.html'>QT</ulink>.
+        </para>
+   </sect1>
+   <sect1 id="art2">
+        <title>Make: Пример использования GNU Make скрипта в качестве системной утилиты</title>
+        <para>Год: 2006</para>
+        <para>
+            Пример демонстрирует элегантность декларативного языка программирования по сравнению с алгоритмическим языком для задач,
+            связанных с обработкой списков. Скрипт раскрывает некоторые возможности инструмента GNU Make, которые позволяют эффективно
+            обрабатывать списки файлов. Назначение скрипта: инсталляция локальной документации в систему Debian.
+        </para>
+
+        <formalpara><title><ulink url='examples/update-local-docs'><filename>update-local-docs</filename></ulink></title>
+        <programlisting>
+        #!/usr/bin/make -f
+        STATUS_DIR := /var/lib/doc-base/info
+        LOCAL_DIR := /usr/local/doc
+        CONTROL_DIR := /usr/share/doc-base
+        DOCS := $(basename $(notdir $(wildcard $(LOCAL_DIR)/*.doc-base)))
+        STATUS_FILES := $(addprefix $(STATUS_DIR)/,$(addsuffix .status,$(DOCS)))
+        CONTROL_FILES := $(addprefix $(CONTROL_DIR)/,$(DOCS))
+
+        $(STATUS_DIR)/%.status: $(LOCAL_DIR)/%.doc-base
+            install-docs -i $&lt;
+            
+        $(CONTROL_DIR)/%: $(LOCAL_DIR)/%.doc-base
+            ln -s $&lt; $@
+
+        all:    $(STATUS_FILES) $(CONTROL_FILES)
+            dwww-build-menu
+
+        .PHONY: all        
+        </programlisting>
+        </formalpara>
+
+        <para>
+            <orderedlist>
+                <listitem><para>Для каждого файла .doc-base в директории LOCAL_DIR запускается команда install-docs, если в директории STATUS_DIR
+                    не существует соответствующий .status файл либо если .status файл моложе, чем .doc-base файл.</para></listitem>
+                <listitem><para>Для каждого .doc-base файла создаётся ссылка (soft link) в CONTROL_DIR без расширения .doc-base, если она не
+                    существует.</para></listitem>
+                <listitem><para>Запускается dwww-build-menu</para></listitem>
+            </orderedlist>
+        </para>
+    </sect1>
+    <sect1 id="art3">
+        <title>C++: Патч к системе документирования Doxygen</title>
+        <para>Год: 2006</para>
+        <para>
+            Система документирования Doxygen позволяет генерировать документацию к проектам на разных языках программирования (C++, Java, Objective-C, IDL).
+            Исходная документация берётся из исходных текстов программы. Выходящая документация генерируется в различных форматах:
+            HTML, LaTeX, RTF, Man, XML. Система Doxygen написана на языке C++.
+        </para>
+        <para>
+            Патч расширяет функциональность команды \copydoc модификаторами :brief и :detail для уточнения того, какая именно секция должна копироваться.
+            Патч демонстрирует навыки анализа сложных систем, поиска рационального баланса между правильностью кода и объёмом выполняемой работы, а
+            также знание технологии парсинга при помощи инструмента GNU Flex.
+        </para>
+        <para>
+            Файл: <ulink url='examples/doxygen.doccopy.patch'><filename>doxygen.doccopy.patch</filename></ulink>
+        </para>
+    </sect1>
+    <sect1 id="art4">
+        <title>Perl, WWW: реализация наследуемых статических членов данных класса</title>
+        <titleabbrev>Perl: наследование членов данных</titleabbrev>
+        <para>Год: 2006</para>
+        <para>
+            Пример. Имеется упрощённая модель классов: Widget, List, NewsList, NewsListEdit. Каждый класс наследует предыдущий в указанной последовательности.
+            Кроме абстрактного класса Widget, каждый класс реализует некоторый структурный элемент веб-страницы.
+            В паттерне MVC они играют роль "C" (контроллера). Роль "V" (вида) выполняют компоненты динамической системы веб-сайтов Mason.
+            Каждый класс Widget связан с некоторым файлом-компонентом Mason. Предположим, List и NewsList в HTML выглядят идентично,
+            следовательно они используют один и тот же компонент Mason: list.mas. NewsListEdit класс реализует дополнительные элементы управления,
+            которые позволяют пользователю редактировать ленту новостей. Ему необходим другой элемент: list_edit.mas. Компонент list_edit.mas
+            внутри себя использует list.mas, но для NewsListEdit это прозрачно, он знает только про list_edit.mas.
+        </para>
+        <para>
+            Итак, классу List присваивается компонент list.mas. Класс NewsList использует такой же компонент, что и List, поэтому в нём ничего указывать
+            не нужно. Значение наследуется от List. Классу NewsListEdit присваивается компонент list_edit.mas. Наследники класса NewsListEdit будут иметь
+            именно такое значение, если они не укажут компонент явно.
+        </para>
+        <para>
+            Для реализации подобной концепции необходим механизм наследования значений статических аттрибутов класса. Кратко о специфике объектной ориентированности Perl.
+            Большая часть механизмов ООП реализуется на стадии выполнения. Что, по сравнению с C++ даёт гораздо большую степень свободы действий,
+            но с другой стороны, требует дополнительных трудозатрат.
+        </para>
+
+        <programlisting>
+        use Symbol;
+        use UNIVERSAL qw(isa);
+
+        sub init_comp_for_package
+        {
+            my $var_name = shift;
+            my $class = shift;
+            my $next_class = $class;
+            my @prev_classes;
+            do {
+                my $comp = $${qualify_to_ref $var_name => $next_class};
+                if (defined $comp) {
+                    map {
+                        $${qualify_to_ref $var_name => $_} = $comp;
+                    } @prev_classes;
+                    return $comp;
+                }
+                my $cl;
+                my $found;
+                for $cl (@${qualify_to_ref ISA => $next_class}) {
+                    if (isa($cl, 'Site::Widget')) {
+                        $found = $cl;
+                        last;
+                    }
+                }
+                die "Base Widget not found for $next_class" if not defined $found;
+                push @prev_classes, $next_class;
+                $next_class = $found;
+            } while ($next_class ne 'Site::Widget');
+            die "There is no COMP defined for $class or any of its ancestors";
+        }
+        </programlisting>
+
+        <para>
+            init_comp_for_package проверяет значение переменной $var_name для класса $class. Если значение не задано, оно копируется от ближайшего предка,
+            который имеет значение для этой переменной. Это же значение заносится во все классы-предки, по иерархической линии находящиеся между $class и
+            первым предком, который имеет значение для переменной $var_name. Механизм подразумевает, что у класса может быть только один базовый предок,
+            откуда может быть взято значение, т.е. ветвление иерархии не просматривается. Это упрощение обусловлено конкретной задачей. Поиск значения
+            прекращается на корневом классе Site::Widget.
+        </para>
+        <para>
+            Следует отметить, что данный механизм разработан для того, чтобы не использовать блоки BEGIN в классах потомков. Этот механизм заносится в абстрактный
+            класс, и запускается в конструкторе. В потомках, при этом, не требуются никакие блоки BEGIN. Плюс такого подхода: не нужно добавлять правило в политику
+            разработки классов; минусы: запуск из конструктора, сложность механизма. Вопрос в том, что скорее всего минусы перевешивают плюс, и для реальных задач
+            лучше всё-таки использовать блоки BEGIN.
+        </para>
+    </sect1>
+    <sect1 id="art5">
+        <title>Hack, WinAPI, C, Assembly, Threads: Внедрение в исполняемую программу чужеродного кода</title>
+        <para>Год: 2006</para>
+        <para>Файлы:</para>
+            <itemizedlist spacing="compact">
+            <listitem><ulink url='examples/qloader.cpp'><filename>qloader.cpp</filename></ulink></listitem>
+            <listitem><ulink url='examples/qextract.cpp'><filename>qextract.cpp</filename></ulink></listitem>
+            <listitem><ulink url='examples/utils.h'><filename>utils.h</filename></ulink></listitem>
+            </itemizedlist>
+        <para>
+            qloader подгружает к запущенному процессу некоторой программы свою DLL-библиотеку (qextract) и переводит определённый вызов в этом процессе
+            на эту DLL. qextract обрабатывает вызов, затем вызывает старый код программы -- т.е. для программы-жертвы работа qextract.dll абсолютно прозрачна.
+            Назначение данного проекта -- извлечение некоторой информации из определённой программы. По известным причинам настоящее имя программы и адреса
+            процесса были изменены.
+        </para>
+        <para>
+            Пример демонстрирует навыки реверсного инженеринга и знакомство с вирусными технологиями. Интересно решение поиска адреса функции GetProcAddress
+            по её смещению относительно GetModuleHandle в kernel32.dll. Это позволяет избежать сканирование таблицы экспортов kernel32.dll. Смещение вычисляется
+            в запущенном процессе qloader и передаётся в процесс жертвы, после чего выполняются все необходимые операции, и подгружается библиотека qextract.
+            Интересен способ получения текущего значения регистра EIP:
+        </para>
+
+        <programlisting>
+        call +0
+        pop eax
+        </programlisting>
+
+        <para>
+            Пример также интересен тем, что те вещи, которые обычно пишутся на Ассемблере, здесь реализованы на Си.
+        </para>
+    </sect1>
+    <sect1 id="art6">
+        <title>Prolog: Примеры запросов к реляционной базе данных</title>
+        <para>Год: 2006</para>
+        <para>Файлы (кодировка CP1251):</para>
+            <itemizedlist spacing="compact">
+            <listitem><ulink url='examples/work.pro'><filename>work.pro</filename></ulink></listitem>
+            <listitem><ulink url='examples/calendar.pro'><filename>calendar.pro</filename></ulink></listitem>
+            <listitem><ulink url='examples/clinic.pro'><filename>clinic.pro</filename></ulink></listitem>
+            </itemizedlist>
+
+        <para>
+            Пример демонстрирует способность программирования языке Prolog. Из примера видно, наскольно неудобной
+            может быть реализация алгоритма с ветвлением на декларативном языке логики вроде Prolog (calendar.pro).
+        </para>
+    </sect1>
+    <sect1 id="art7">
+        <title>XSLT, XPath, XML: Трансформация XML файлов</title>
+        <para>Год: 2005</para>
+        <para>Файлы:</para>
+        <itemizedlist spacing="compact">
+            <listitem><ulink url='examples/dialog/dialog.xsl'><filename>dialog.xsl</filename></ulink></listitem>
+            <listitem><ulink url='examples/dialog/readme'><filename>readme</filename></ulink></listitem>
+            <listitem><ulink url='examples/dialog/makefile'><filename>makefile</filename></ulink></listitem>
+        </itemizedlist>
+
+        <para>
+            Данный пример трансформирует файл диалога компьютерной игры Neverwinter Nights для удобства редактирования.
+            Приложенный файл README написан на английском языке.
+        </para>
+    </sect1>    
+    <sect1 id="art8">
+        <title>DocBook, XSLT, XPath, LaTeX, XML: Оформление материала в формате DocBook</title>
+        <para>Год: 2006</para>
+        <para>Файлы:</para>
+        <itemizedlist spacing="compact">
+            <listitem><ulink url='./midenkov-cv.xml'><filename>midenkov-cv.xml</filename></ulink></listitem>
+            <listitem><ulink url='templ/docbook.latex.xsl'><filename>docbook.latex.xsl</filename></ulink></listitem>
+            <listitem><ulink url='./makefile'><filename>makefile</filename></ulink></listitem>
+        </itemizedlist>
+        <para>
+            Пример демонстрирует технологию "мультиформатного" документирования. Исходный материал разрабатывается в
+            формате DocBook. Конечный материал генерируется в форматах HTML и PDF. Для генерирования документа в PDF формате
+            используется промежуточная стадия в формате LaTeX. Возможны также другие конечные форматы: GNU Info, Man, RTF и пр.
+        </para>
+        <para>
+            Для генерирования формата LaTeX используются XSLT-шаблоны <ulink url='http://db2latex.sourceforge.net/'>db2latex</ulink>.
+            Файл docbook.latex.xsl устраняет недочёты этих шаблонов, связанные с неправильными вертикальными отступами структурных элементов.
+        </para>
+    </sect1>
+    </chapter>
+</book>

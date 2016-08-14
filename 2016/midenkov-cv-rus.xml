@@ -1,0 +1,497 @@
+<?xml version='1.0' encoding="UTF8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
+
+<book lang="ru">
+  <bookinfo>
+    <title>Programming Curriculum Vitae</title>
+    <subtitle>А. С. Миденков</subtitle>
+    <copyright>
+      <year>2016</year>
+      <holder>Aleksey Midenkov</holder>
+    </copyright>
+    <revhistory>
+      <revision>
+        <date>2016-08-14</date>
+        <revremark>Добавлен <link linkend="math_calc">Math calculator</link></revremark>
+      </revision>
+    </revhistory>
+  </bookinfo>
+  <chapter id="ch1">
+    <title>Миденков Алексей Сергеевич</title>
+    <sect1 id="s1">
+      <title>Краткая информация</title>
+      <para>
+        <informaltable width="100%" cellpadding="0pt" cellspacing="0pt" frame="void">
+          <col width="25%" align="left"/>
+          <col width="75%" align="left"/>
+          <tr>
+            <td>
+              <ulink url="images/mid-cv.jpg"><inlinemediaobject>
+                <imageobject>
+                  <imagedata fileref="images/mid-cv.jpg" contentwidth="3cm" contentdepth="3cm" format="JPG" valign="top"/>
+                </imageobject>
+              </inlinemediaobject></ulink>
+            </td>
+            <td>
+              <simplelist>
+                <member>Дата и место рождения: 18 августа 1978 г., город Кемерово</member>
+                <member>Образование: ТУСУР (г. Томск), 2006 г., специальность АСОиУ</member>
+                <member>Телефон: +7 905 901 6065</member>
+                <member>E-mail: <ulink url="mailto:midenok@bk.ru">midenok@bk.ru</ulink></member>
+                <member>Skype: midenok</member>
+              </simplelist>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <para>CV:</para>
+              <itemizedlist>
+                <listitem><para>
+                    <ulink url="http://midenok.github.io">HTML</ulink></para></listitem>
+                <listitem><para>
+                    <ulink url="http://midenok.github.io/midenkov-cv-rus.pdf">PDF</ulink></para></listitem>
+              </itemizedlist>
+            </td>
+            <td>
+              <para>Резюме:</para>
+              <itemizedlist>
+                <listitem><para>
+                  <ulink url="https://hh.ru/resume/24315b02ff020dba580039ed1f586d44436a41">Ведущий
+                    разработчик</ulink></para></listitem>
+                <listitem><para>
+                  <ulink url="https://hh.ru/resume/f38b81c7ff0317e1e90039ed1f6559366c6744">Senior
+                    Developer</ulink></para></listitem>
+              </itemizedlist>
+            </td>
+          </tr>
+        </informaltable>
+      </para>
+      <sect2>
+        <title>Последнее место работы</title>
+        <para><ulink url="https://en.wikipedia.org/wiki/Phorm">Phorm</ulink> (121 Media). Московский
+          офис ООО "ФОРМ" (в прошлом ООО "Передовые интернет решения") насчитывал порядка 100
+          человек и состоял из нескольких отделов: Server, Datacapture, UI, DB, QA, SA, HR. Компания
+          специализируется на целевой рекламе. Её основное отличие от конкурентов в том, что она
+          способна собирать целевой профиль и осуществлять поставку рекламы на стороне провайдера,
+          что улучшало качество профиля и соотношение клик : покупка в сравнении с веб-сайтами.
+          Разработкой этой технологии работы с трафиком на стороне провайдера занимался отдел
+          Datacapture.</para>
+        <beginpage/>
+      </sect2>
+    </sect1>
+    <sect1 id="s3">
+      <title>Обо мне</title>
+      <para>В компании "ФОРМ" я работал в отделе Dataсapture с 2007-го по 2015 гг., затем в начале
+        2015-го был переведён в отдел Server, где я проработал несколько месяцев до увольнения. В
+        отделе Datacapture я написал модули обработки запросов для Apache и Nginx, модуль
+        восстановления пользователей по данным браузера, модуль защиты от фишинговых сайтов, новую
+        версию стартующих скриптов, а также другие обновления в рамках соответствующих тикетов.
+        Разработка велась в основном на C++, Perl, XSLT, Bash. Для внутрикластерного взаимодействия
+        использовалась CORBA.</para>
+      <para>Также, я оптимизировал производительность процессов, исправлял утечки памяти и
+        некорректные операции исполнения, работал с продакшн кластерами. Я хорошо ориентируюсь в
+        большом объёме кода. Разбираюсь в устройстве серверных приложений, владею средствами POSIX,
+        в том числе POSIX Threads. Работал с библиотеками libev и zlib. Писал скрипты для Make,
+        CMake и Automake.</para>
+      <para>Не лишне будет упомянуть, что мой предпочитаемый дистрибутив – Debian, которым я
+        пользуюсь с 1999-го года. И в котором я работал как с debhelper, так и с CDBS, а также
+        репозиториями reprepro.</para>
+      <para>Посмею также заметить, что работу я делаю качественно. Тщательно обдумываю свои решения,
+        смотрю на задачу с различных сторон. Если попытаться коротко описать моё жизненное кредо, то
+        я бы представил его двумя афоризмами: «стремиться к идеалу изо всех сил, зная, что он
+        недостижим» и «малыми шагами совершаются большие дела».</para>
+      <sect2>
+        <title>Немного деталей</title>
+      <para>Расскажу поподробнее про модули, которые я написал. Модуль обработки запросов
+          взаимодействует с браузером пользователя. Когда пользователь впервые обращается в домен
+          компании, запрос приходит в этот модуль. Далее производится ряд операций – проверка на
+          возможность установить куки, попытка восстановить куки из локальных хранилищ и наконец
+          присвоение уникального идентификатора. Когда пользователь обращается за рекламой, то
+          модуль может выступать в качестве прокси, если того требует инфраструктура и передать
+          запрос в рекламный сервер.</para>
+      <para>Модуль восстановления пользователей по данным браузера. Если пользователь удалил свой
+          идентификатор и восстановить его из локального хранилища не получилось, то существовала
+          возможность восстановить его по данным браузера, т.к. все эти данные сохранялись в базе
+          наряду с уникальным идентификатором и IP-адресом. При этом во время поиска по базе
+          использовался алгоритм нечёткого сравнения (расстояние Левенштейна) на случай, если данные
+          браузера немного изменились – например, обновилась версия или были установлены новые
+          шрифты.</para>
+      <para>И наконец модуль защиты от фишинговых сайтов. В этом модуле производилась проверка
+        оригинального URL пользователя в списке фишинговых URL. Если обнаруживалось соответствие, то
+        пользователю вместо запрашиваемой страницы открывалась страница с предупреждением. Список
+        хранился в shared memory и был доступен всем процессам и потокам демона. При этом он
+        периодически инкрементально обновлялся по HTTP протоколу.</para>
+    </sect2>
+    </sect1>
+  </chapter>
+  <chapter id="ch2">
+    <title>Примеры работ</title>
+    <sect1 id="art2-1">
+      <title>Evoxy: libev-based HTTP proxy</title>
+        <synopsis>Год: 2016
+Инструментарий: С++11, POSIX, libev</synopsis>
+        <simpara><emphasis>Исходный код:</emphasis></simpara>
+      <itemizedlist>
+        <listitem><simpara><emphasis><ulink url="https://github.com/midenok/evoxy"
+            >Репозиторий</ulink></emphasis></simpara></listitem>
+        <listitem><simpara><emphasis><ulink url="https://github.com/midenok/evoxy/releases/latest"
+              >Aрхивы</ulink></emphasis></simpara></listitem>
+      </itemizedlist>
+   
+      <para>Текущий статус проекта: в HTTP-proxy реализован минимальный функционал, необходимый для
+        успешной работы: Keep-Alive соединения, обработка Transfer-Encoding: chunked. В будущем
+        предусматривается такая функциональность, как: пайплайнинг запросов (<ulink url="https://github.com/midenok/evoxy/issues/3">Issue #3</ulink>), асинхронное разрешение
+        доменных имён (<ulink url="https://github.com/midenok/evoxy/issues/4">Issue #4</ulink>),
+        HTTPS. </para>
+      <para>Программа написана на C++ с использованием элементов 11-го стандарта. Архитектура демона
+        основана на неблокирующихся сокетах и состоит из пула потоков, в каждом из которых запущен
+        цикл событий, обрабатывающий все принятые в данном потоке соединения. Дизайн Evoxy
+        предполагает, что по возможности все ресурсы, необходимые потоку должны быть локальны в этом
+        потоке, а значит свободны от многопоточной конкурентности. На данный момент программа не
+        использует ни одного мьютекса (или какого-либо другого средства синхронизации
+        потоков).</para>
+      <para>Демон работает на преаллоцированной памяти. На стадии инициализации каждому потоку из
+        кучи выделяются все необходимые пулы памяти. Пулы памяти демона работают с блоками
+        фиксированного размера, т.е. заточены на аллокацию объектов одного определённого типа.
+        Размер пула соответствует установленным в настройках лимитам программы. На данный момент
+        используется всего 3 различных пула: 1 для создания соединения и 2 для кэша доменных
+        имён.</para>
+      <para>Главный недостаток текущей версии в том, что обработчики соединений Frontend и Backend
+        жёстко связаны друг с другом в соотношении 1:1. Такая схема неэффективна для Keep-Alive
+        соединений, поскольку запрос к каждому новому хосту на стороне Frontend-а обязывает Backend
+        разрывать текущее соединение и устанавливать новое. Будущая версия программы должна иметь
+        пул соединений Backend-ов, которым может пользоваться Frontend (см. <ulink url="https://github.com/midenok/evoxy/issues/1">Issue #1</ulink>).</para>
+      <para>См. также: <ulink url="https://github.com/midenok/server-demo/blob/master/README.md"
+          >описание server-demo</ulink>.</para>
+      <beginpage/>
+    </sect1>
+    <sect1 id="math_calc">
+      <title>Math calculator</title>
+      <synopsis>Год: 2016
+Инструментарий: С++11</synopsis>
+      <simpara><emphasis>Исходный код:</emphasis></simpara>
+      <itemizedlist>
+        <listitem>
+          <simpara><emphasis><ulink url="https://github.com/midenok/calculator"
+              >Репозиторий</ulink></emphasis></simpara>
+        </listitem>
+        <listitem>
+          <simpara><emphasis><ulink url="https://github.com/midenok/calculator/releases"
+                >Aрхивы</ulink></emphasis></simpara>
+        </listitem>
+      </itemizedlist>
+      <para>Калькулятор вычисляет математические выражения с учётом приоритета операций и скобок. В
+        выражениях могут присутствовать унарные математические функции (см. <ulink
+          url="http://www.cplusplus.com/reference/cmath/">math.h</ulink>). Вычисление производится
+        двумя стадиями: построение бинарного синтаксического дерева (<code>Calc::parse()</code>) и
+        исполнение синтаксического дерева (<code>Calc::calculate()</code>). Программа не использует
+        рекурсивные вызовы.</para>
+      <para>Правила синтаксического дерева:<orderedlist>
+          <listitem>
+            <para>в корне всегда число, исполнение начинается с корня;</para>
+          </listitem>
+          <listitem>
+            <para>каждый левый потомок: операция (оператор или функция);</para>
+          </listitem>
+          <listitem>
+            <para>каждый правый потомок: число;</para>
+          </listitem>
+          <listitem>
+            <para>оператор исполняется над двумя операндами: предок и правый потомок;</para>
+          </listitem>
+          <listitem>
+            <para>функция исполняется над одним операндом: предок;</para>
+          </listitem>
+          <listitem>
+            <para>если у второго операнда (правый потомок) есть левый потомок (операция), то новая
+              операция имеет приоритет над текущей.</para>
+          </listitem>
+        </orderedlist></para>
+      <para>Таким образом, вычисление начинается с корня и продолжается по левой ветви до первого
+        ветвления (левый потомок у операнда). Затем, состояние сохраняется в стек и вычисление
+        начинается в новой ветви (от операнда). Когда ветвь заканчивается, состояние
+        восстанавливается из стека и продолжается вычисление старой ветви. Обход продолжается до тех
+        пор, пока не закончится ветвь при пустом стеке.</para>
+      <figure>
+        <title>Примеры синтаксических деревьев Math calculator</title>
+        <ulink url="images/calc_syn_tree.png"><inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/calc_syn_tree.png" scalefit="1" contentwidth="164mm"/>
+            </imageobject>
+          </inlinemediaobject></ulink>
+      </figure>
+      <beginpage/>
+    </sect1>
+    <sect1>
+      <title>C++ MySQL wrapper</title>
+        <synopsis>Год: 2013
+Инструментарий: C++, MySQL Connector/C</synopsis>
+        <simpara><emphasis>Исходный код:</emphasis></simpara>
+        <itemizedlist>
+          <listitem><simpara><emphasis><ulink url="https://github.com/midenok/stuff-dbms/tree/master/mysql-wrapper"
+                >Репозиторий</ulink></emphasis></simpara></listitem>
+          <listitem><simpara><emphasis><ulink url="https://github.com/midenok/stuff-dbms/releases/latest"
+              >Архивы</ulink></emphasis></simpara>
+          </listitem>
+        </itemizedlist>
+        <para>С++ обёртка вокруг MySQL Connector/C. Основное её преимущество перед стандартным C++
+        коннектором -- многопоточный пул коннектов. Обёртка имеет дружественный интерфейс: не нужно
+        вручную создавать и разрушать объекты; текст SQL кода инстанцируется выводом в
+          <varname>stringstream</varname>.</para>
+        <example width="164mm">
+        <title>Схема использования MySQL wrapper</title>
+        <programlisting>Conf c;
+c.host = "localhost";
+c.user = "user";
+c.passwd = "password";
+c.db = "database";
+
+Connection::Pool pool(pool_size);
+
+try {
+    pool.connect(c);
+    Query q(pool);
+    q &lt;&lt; "-- any SQL code (multiple statements allowed)\n";
+
+    q.execute(); // or q.execute_only() if no data returned
+    
+    Row row;
+    while (row = q.fetch_row()) {
+        // Get data from row.
+        //   integers are accessed with (POS_INDEX);
+        //   strings are accessed with [POS_INDEX],
+        // like here:
+        int integer_value = row(0);
+        std::string string_value = row[1];
+   }
+} catch (Database::Error &amp;ex) {
+    std::cerr &lt;&lt; ex.what();
+} catch (Database::Exception &amp;ex) {
+    std::cerr &lt;&lt; ex.what();
+}</programlisting>
+        <para>См. также рабочий пример использования: <ulink
+            url="https://github.com/midenok/stuff-dbms/blob/master/mysql-wrapper/example.cpp"
+            >example.cpp</ulink>.</para>
+      </example>
+      <beginpage/>
+    </sect1>
+    <sect1>
+      <title>Набросок обработки Bid-запросов в AdServer</title>
+      <synopsis>Год: 2015
+Инструментарий: UML class diagram
+Copyright: ©<ulink url="https://en.wikipedia.org/wiki/Phorm">Phorm Corp</ulink></synopsis>
+      <para>Диаграмма основана на UML диаграмме классов и представляет собой смесь поведенческой и
+        структурной диаграммы. Диаграмма позволила быстро понять соотношение и поведение объектов в
+        контексте конкретной задачи. Ни одна из существующих поведенческих видов диаграмм UML для
+        этого не подошла.</para>
+      <figure>
+        <title>Схема среза по обработке Bid-запросов в AdServer</title>
+        <ulink url="images/bidding_diagram.png"><inlinemediaobject>
+          <imageobject>
+              <imagedata fileref="images/bidding_diagram.png" scalefit="1" contentwidth="164mm"/>
+            </imageobject>
+        </inlinemediaobject></ulink>
+      </figure>
+      <para><beginpage/>Поясню устройство диаграммы:<itemizedlist>
+        <listitem>
+          <para>жёлтым цветом обозначены классы, фиолетовым -- методы;</para>
+        </listitem>
+        <listitem>
+          <para>"ассоциацией" обозначены вызовы методов;</para>
+        </listitem>
+        <listitem>
+          <para>"реализацией" обозначена принадлежность методов классам;</para>
+        </listitem>
+        <listitem>
+          <para>"композицией" показано эксклюзивное владение объектом;</para>
+        </listitem>
+        <listitem>
+          <para>"агрегацией" показано временное владение объектом либо хранение указателя на
+            объект.</para>
+        </listitem>
+      </itemizedlist>
+      </para>
+      <para>Разберём содержимое диаграммы. Класс <code>Frontend</code> в вызове
+          <code>handle_request()</code> создаёт <code>BaiduRequestTask</code>, который складывается
+        в очередь <code>TaskRunner</code>. <code>TaskRunner</code> вызывает <code>execute()</code> у
+          <code>BaiduRequestTask</code>, который в свою очередь вызывает
+          <code>process_baidu_request()</code> у <code>Frontend</code>. Каким образом -- показано в
+        верхнем правом углу: <code>BaiduRequestTask</code> унаследован от <code>RequestTask</code>,
+        а тот в свою очередь содержит указатель на объект <code>Frontend</code>:
+          <code>bid_frontend_</code>. Итак, <code>process_baidu_request()</code> вызывает
+          <code>fill_by_baidu_request()</code> у <code>RequestInfoFiller</code>. На этом контекст
+        схемы заканчивается.</para>
+      <para>Подчеркну, что диаграмма описывает лишь очень небольшой срез, необходимый для решения
+        конкретной задачи. В огромном объёме кода подобные компактные наброски на мой взгляд
+        жизненно важны, т.к. они позволяют быстро вспоминать контекст задачи. Возможно, в диаграмме
+        была допущена неточность: <code>RequestTask</code> вряд ли владеет объектом
+          <code>Frontend</code>, отношение композиции должно быть заменено отношением
+        агрегации.</para>
+    </sect1>
+    <sect1>
+      <title>Bush: build shell</title>
+        <synopsis format="linespecific">Год: 2007-2015
+Инструментарий: Bash</synopsis>
+      <simpara><emphasis>Исходный код:</emphasis></simpara>
+      <itemizedlist>
+        <listitem><simpara><emphasis><ulink
+                url="https://github.com/midenok/stuff-linux/blob/master/scripts/devel/bush"
+                >bush</ulink></emphasis></simpara></listitem>
+      </itemizedlist>
+      
+        <para>Скрипт для автоматизации workflow по разработке задач. Запускает сессию Bash с
+          окружением, настроенным под контекст конкретного тикета задачи. В окружение добавляются
+          CLI-команды, которые значительно сокращают рутинные действия по подготовке задачи к
+          работе. Например, при помощи только одной команды 'new' происходят следующие действия:<itemizedlist>
+            <listitem>
+              <simpara>в SVN создаётся бранч задачи, а на диске его рабочая копия;</simpara>
+            </listitem>
+            <listitem>
+              <simpara>при необходимости чекаутятся и компилируются все необходимые
+                библиотеки;</simpara>
+            </listitem>
+            <listitem>
+              <simpara>компилируется сама задача (т.е. основное приложение из рабочей
+                копии);</simpara>
+            </listitem>
+            <listitem>
+              <simpara>инстанцируются файлы конфигурации и запускается приложение задачи.</simpara>
+            </listitem>
+          </itemizedlist></para>
+        <para>Каждая задача имеет свою директорию с номером и кратким названием, внутри которой
+        хранятся все файлы задачи: рабочие копии, деревья компиляции, деревья инсталяции,
+        конфигурация, скрипты, заметки и пр. В данный момент скрипт заточен под задачи конкретной
+        компании, но может быть переделан под любой workflow.</para>
+    </sect1>
+    <sect1>
+      <title>System troubleshooting report</title>
+      <synopsis>Год: 2010
+Инструментарий: Perl, Linux system utilities</synopsis>
+      <simpara><emphasis>Исходный код:</emphasis></simpara>
+      <itemizedlist>
+        <listitem><simpara><emphasis><ulink
+                url="https://github.com/midenok/stuff-linux/blob/master/scripts/system/trouble-report"
+                >trouble-report</ulink></emphasis></simpara></listitem>
+      </itemizedlist>
+      <para>Скрипт собирает системные данные хоста для случаев критических неисправностей:
+        информацию по системным ресурсам, системные логи и логи программы, информацию по коркам,
+        конфигурацию, текущее поведение системы и пр. Скрипт настраивается модификацией
+          <code>@REGISTRY</code>:<example>
+          <title>Настройка работы trouble-report</title>
+          <programlisting>my @REGISTRY = (
+    {
+        title => 'Uptime',
+        command => 'uptime',
+        filename => 'common.txt'
+    },
+    {
+        title => 'Processes by user',
+        command => 'ps uax',
+        filename => 'ps.txt'
+    },
+    {
+        title => 'Process tree',
+        command => 'pstree -p',
+        filename => 'pstree.txt'
+    },
+    {
+        title => 'Last log files',
+        command => "ls -1rt $O{program_root}/var/log/*|tail|xargs tail",
+        filename => 'logs.txt'
+    },
+    # ... and so on ...
+);</programlisting>
+        </example></para>
+      <para>Скрипт имеет процедуру бинарного поиска для быстрого поиска записи лога по timestamp:
+          <code>binary_find</code>.</para>
+      <beginpage/>
+    </sect1>
+    <sect1>
+      <title>Browser list parser</title>
+        <synopsis>Год: 2013
+Инструментарий: Perl</synopsis>
+      <simpara><emphasis>Исходный код:</emphasis></simpara>
+      <itemizedlist>
+        <listitem><simpara><emphasis><ulink
+                url="https://github.com/midenok/stuff-linux/blob/master/scripts/devel/browserlist-parser/browserlist-parser.pl"
+                >browserlist-parser.pl</ulink></emphasis></simpara></listitem>
+      </itemizedlist>
+      <para>Скрипт подготавливает данные, необходимые для парсинга строчек User-Agent. Он
+          преобразует списки сайта <ulink url="http://www.useragentstring.com/pages/Browserlist/">useragentstring.com</ulink> в упорядоченные списки токенов, по которым происходит
+          идентификация браузера и операционной системы. Основная сложность заключается в том, что
+          строка User-Agent может содержать несколько токенов от разных браузеров. Так, например
+          строка для AOL
+          9.7:<programlisting>Mozilla/4.0 (compatible; MSIE 8.0; AOL 9.5; AOLBuild 4337.43; Windows NT 6.0;
+Trident/4.0; SLCC1; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.5.21022;
+.NET CLR 3.5.30729; .NET CLR 3.0.30618)</programlisting></para>
+        <para>содержит токен MSIE, поэтому проверка на AOL должна проходить раньше, чем на MSIE.
+          Скрипт анализирует такие появления токенов от других браузеров и определяет порядок в
+          котором токены должны проверяться, чтобы избежать неверного определения. См. также: <ulink url="https://github.com/midenok/stuff-linux/blob/master/scripts/devel/browserlist-parser/browserlist-parser.md">описание использования скрипта</ulink>.</para>
+    </sect1>
+    <sect1>
+      <title>Другое</title>
+      <sect2>
+        <title>Symlinked install</title>
+        <synopsis>Год: 2007-2014
+Инструментарий: CMake, Bash, Perl</synopsis>
+        <simpara><emphasis>Исходный код:</emphasis></simpara>
+        <itemizedlist>
+          <listitem>
+            <simpara><emphasis><ulink url="https://github.com/midenok/ln-install"
+                >ln-install</ulink></emphasis></simpara>
+          </listitem>
+        </itemizedlist>
+        <para>Утилита позволяет избежать шага <code>make install</code> в цикле
+          "редактирование-компиляция-запуск", что значительно облегчает работу с тяжеловесным кодом.
+          Для этого <code>make install</code> вместо копирования файлов создаст символические ссылки
+          на дерево компиляции. Утилита работает с деревьями Autoconf, CMake и MakeMaker.</para>
+      </sect2>
+      <sect2>
+        <title>Конвертер ошибок GCC в MSVC</title>
+        <synopsis>Год: 2016
+Инструментарий: Perl</synopsis>
+        <simpara><emphasis>Исходный код:</emphasis></simpara>
+        <itemizedlist>
+          <listitem>
+            <simpara><emphasis><ulink
+                  url="https://github.com/midenok/scripts/blob/master/scripts/devel/gcc2msvc.pl"
+                  >gcc2msvc.pl</ulink></emphasis></simpara>
+          </listitem>
+        </itemizedlist>
+        <para>Обёртка для GCC позволяет использовать этот компилятор в Visual Studio с корректным
+          выводом ошибок в окно Error List. Данный пример демонстрирует работу <code>Select</code> в
+          связке с <code>Open3</code>.</para>
+      </sect2>
+      <sect2>
+        <title>Реверсинг кода игры Atomic Bomberman</title>
+        <synopsis>Год: 2013
+Инструментарий: Ida Pro 6.1; Syser 1.99</synopsis>
+      <para>В ходе анализа кода DirectX игры <ulink
+            url="https://en.wikipedia.org/wiki/Atomic_Bomberman">Atomic Bomberman</ulink> были
+          найдены функции, отвечающие за работу основного меню ($main_menu_loop), запуска новой игры
+          ($new_game_options, $new_game_players, $new_game), работу настроек игры ($options_menu,
+          $load_options), а также основные игровые переменные, такие как $newgame_goal_amount,
+          $goal_type, $newgame_theme. Все символы с '$' были разработаны мной в процессе реверсинга,
+          полный их список (73) можно посмотреть в <ulink
+            url="http://midenok.github.io/files/bm95_discovered.map">bm95_discovered.map</ulink>.
+          Заметки по анализу находятся в <ulink url="http://midenok.github.io/files/bomberman.txt"
+            >bomberman.txt</ulink>.</para>
+        <para>
+          <ulink url="images/atomic-bomberman.jpg"><inlinemediaobject>
+            <imageobject>
+              <imagedata fileref="images/atomic-bomberman.jpg" align="center" contentwidth="6cm" width="100%" depth="6cm"/>
+            </imageobject>
+          </inlinemediaobject></ulink>
+        </para>
+        <figure>
+          <title>Анализ Atomic Bomberman (cкриншот IDA Pro) </title>
+          <ulink url="images/BM95-IDA.png"><inlinemediaobject>
+              <imageobject>
+                <imagedata fileref="images/BM95-IDA.png" scalefit="1" contentwidth="164mm"/>
+              </imageobject>
+            </inlinemediaobject></ulink>
+        </figure>
+      </sect2>
+    </sect1>
+  </chapter>
+</book>

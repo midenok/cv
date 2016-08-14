@@ -1,0 +1,203 @@
+ChangeDisplaySettings
+EnumDisplaySettings
+
+changedisplaysettingsex
+...
+04430b9
+0442eed
+0442e34
+043c225
+0414e13
+
+Wins to win match
+
+createfilea("MESSAGES.TXT")
+BPX createfilea if *(*(esp+4))==7373656D
+4531d1
+451475
+4514f4
+451504
+41256b (pause)
+412817
+4109d3
+
+access 'Wins to win match'
+45021c
+4518f1 (instantiates template?)
+406f48 ('Wins', count, template, result) (one more break)
+^^^ new game loop
+411cea (exit to main menu)
+42a445
+42bdbf
+^^^ main menu loop
+
+
+write ds:goal_type
+
+at start:
+406403 - set goal_type at start
+40692e - one more at start
+406403 - again
+40692e
+when option changed:
+408bbd
+
+4060b4: call load_options at start
+406a8d: one more time at start after loading progress
+
+443db9 - RegisterClassA
+
+43b70c - process keyboard (AL):
+D0 - Down
+C8 - Up
+CB - Left
+CD - Right
+1C - Enter
+01 - Escape
+
+
+$process_keyboard() from $new_game_options()
+43b625
+43a50e
+4103f2
+407083
+
+$process_keyboard() from $new_game_players()
+43b625
+43a50e
+4103f2
+41170e
+
+keypresses at $new_game_options()
+40708c eax values:
+0x150 - down
+0x148 - up
+0x14d - right
+0x14b - left
+0xd - enter
+
+ddraw methods (C&C ddraw.dll)
+66ac1c90
+66ac1460
+66ac4010
+66ac3b70
+
+
+Initial
+$surface_caller_A
+43dd39
+43dd00
+4311b7
+414e39 (some output)
+4109d8 (some pause)
+42be35
+
+Main menu
+$surface_caller_A
+43d472
+415c42
+42bb01
+
+Game menu
+$surface_caller_A
+43d472
+415c42
+406ffd
+
+Players menu
+$surface_caller_A
+43d472
+415c42
+4116f3
+
+Options menu
+$surface_caller_A
+43d472
+415c42
+408987
+
+write unknown_B
+451c00
+43f599
+43e6ee
+42cb14
+42db14 (common with fopen_)
+43c2d3
+414e13
+4109d8 (load data)
+42be35
+
+write unknown_B next fread_
+eip 43f594
+eax 6fde4
+ebx 4
+ecx 45caa2 (dwTlsIndex+0x476)
+edx 1
+
+ReadFile_0:
+eax a0
+ebx 1000
+ecx 6fd68
+edx 920030
+
+453495
+4527b9
+451cc2
+43f599
+
+$ReadFile_1:
+eax 1 (??? [ecx+10])
+ebx 1000 (size [ecx+14])
+edx 920030 (dst?)
+
+$ReadFile_1 (453485):
+ecx 910030
+esi 1
+eax 1 - index inside ecx
+
+write *$filehandle_array + 4 (put filehandle):
+44f299 (writes 0), 44f18a (this pair repeats many times)
+put filehandle:
+44f18a
+453208
+451475
+4514f4
+451504
+414ad3
+41509e
+4109d8
+
+put 0:
+44f299
+451893
+451775
+45176a
+441e67
+42cbbb ($put_0_to_fh_arr - who initializes it?)
+42db14
+
+$put_0_to_fh_arr initializer
+42c3d9
+43c2ba
+414e13
+
+bpx 414e0e
+x
+bpx fopen_ if bpcount > 9
+bpmb unknown_B w
+x
+x
+
+fopen_("color.pal") just before write unknown_B
+43f2b9
+43e6c3
+42ca27 -> gets to write unknown_B (large processing)
+42db14 (common with write unknown_B)
+
+unknown_B is text_color
+unknown_A is outline_color
+
+Cursor image is in misc.ani
+
+interactive state shange in new_game_menu
+40746e Esc pressed

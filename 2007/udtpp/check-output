@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ ! -d "$1" ]
+then
+    echo Arg is not a dir!
+    exit 1
+fi
+
+grep -v PSendBuffer $1/server.log | nl > $1/nserver.log
+grep -v PSendBuffer $1/client.log | nl > $1/nclient.log
+echo Analyzing server log:
+./check-threads.pl < $1/nserver.log
+echo Analyzing client log:
+./check-threads.pl < $1/nclient.log
+
+egrep "UDT sending via|replying data" $1/nclient.log > $1/tclient.log
+egrep "UDT sending via|replying data" $1/nserver.log > $1/tserver.log
+
+grep shut $1/nserver.log | grep -vi lock > $1/sserver.log
+grep shut $1/nclient.log | grep -vi lock > $1/sclient.log

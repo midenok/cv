@@ -1,0 +1,32 @@
+Copyright (c) 2006 Aleksey Midenkov. All rights reserved.
+
+Version 0.6.4-5
+
+Requirements:
+UDT: UDP-based Data Transfer Protocol
+http://udt.sourceforge.net/
+
+For windows you will need additionally:
+POSIX Threads for Win32
+http://sourceware.org/pthreads-win32/
+
+Compiling under windows:
+
+1) Build UDT from udt3/win/udt.vcproj
+
+2) Build POSIX Threads in its dir:
+    nmake clean VC
+
+3) Build UDTPP from udtpp/dotnet/udtpp.vcproj
+    First you will need to setup include and lib paths for UDT and PTHREADS.
+    It is done via properties of UDTPP project in Visual Studio.
+
+Running UDTPP under windows
+
+To run under windows you need dll files in place where udtpp.exe is:
+udt.dll
+pthreadVC2.dll
+
+Compile under Linux:
+
+$ make

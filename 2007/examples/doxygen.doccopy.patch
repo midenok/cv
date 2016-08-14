@@ -1,0 +1,144 @@
+diff -udpr doxygen/src/docparser.cpp doxygen-patched/src/docparser.cpp
+--- doxygen/src/docparser.cpp	2006-11-21 08:24:50.000000000 +0700
++++ doxygen-patched/src/docparser.cpp	2006-11-21 15:42:40.000000000 +0700
+@@ -1654,7 +1654,7 @@ void DocIncOperator::parse()
+ 
+ //---------------------------------------------------------------------------
+ 
+-void DocCopy::parse()
++void DocCopy::parse(int type)
+ {
+   QString doc,brief;
+   Definition *def;
+@@ -1678,8 +1678,10 @@ void DocCopy::parse()
+       // handle them in all cases.
+       brief+='\n';
+       doc+='\n';
+-      internalValidatingParseDoc(this,m_children,brief);
+-      internalValidatingParseDoc(this,m_children,doc);
++      if (type & PARSE_BRIEF)
++        internalValidatingParseDoc(this,m_children,brief);
++      if (type & PARSE_DETAIL)
++        internalValidatingParseDoc(this,m_children,doc);
+       g_copyStack.remove(def);
+       ASSERT(g_styleStack.isEmpty());
+       ASSERT(g_nodeStack.isEmpty());
+@@ -4419,6 +4421,16 @@ int DocPara::handleCommand(const QString
+     case CMD_COPYDOC:
+       {
+ 	int tok=doctokenizerYYlex();
++        int type = DocCopy::PARSE_ALL;
++	if (tok==TK_CMDPARAM)
++        {
++            if (g_token->name.compare("brief") == 0)
++                type = DocCopy::PARSE_BRIEF;
++            else if (g_token->name.compare("detail") == 0)
++                type = DocCopy::PARSE_DETAIL;
++
++    	    tok=doctokenizerYYlex();
++	}
+ 	if (tok!=TK_WHITESPACE)
+ 	{
+ 	  warn_doc_error(g_fileName,doctokenizerYYlineno,"Warning: expected whitespace after %s command",
+@@ -4440,7 +4452,7 @@ int DocPara::handleCommand(const QString
+ 	}
+         DocCopy *cpy = new DocCopy(this,g_token->name);
+         m_children.append(cpy);
+-        cpy->parse();
++        cpy->parse(type);
+       }
+       break;
+     case CMD_INCLUDE:
+diff -udpr doxygen/src/docparser.h doxygen-patched/src/docparser.h
+--- doxygen/src/docparser.h	2006-11-21 08:24:50.000000000 +0700
++++ doxygen-patched/src/docparser.h	2006-11-21 15:21:44.000000000 +0700
+@@ -502,13 +502,18 @@ class DocIndexEntry : public DocNode
+ class DocCopy : public CompAccept<DocCopy>, public DocNode
+ {
+   public:
++    enum {
++        PARSE_BRIEF = 1,
++        PARSE_DETAIL= 2,
++        PARSE_ALL   = 255
++    };
+     DocCopy(DocNode *parent,const QString &link) 
+       : m_parent(parent), m_link(link) { }
+     Kind kind() const          { return Kind_IndexEntry; }
+     QString link() const       { return m_link; }
+     DocNode *parent() const    { return m_parent; }
+     void accept(DocVisitor *v) { CompAccept<DocCopy>::accept(this,v); }
+-    void parse();
++    void parse(int type=PARSE_ALL);
+ 
+   private:
+     DocNode *m_parent;
+diff -udpr doxygen/src/doctokenizer.h doxygen-patched/src/doctokenizer.h
+--- doxygen/src/doctokenizer.h	2006-11-21 08:24:50.000000000 +0700
++++ doxygen-patched/src/doctokenizer.h	2006-11-20 11:25:52.000000000 +0700
+@@ -39,6 +39,7 @@ enum Tokens
+   TK_NEWPARA       = 9,
+   TK_RCSTAG        = 10,
+   TK_URL           = 11,
++  TK_CMDPARAM 	   = 12,
+ 
+   RetVal_OK             = 0x10000,
+   RetVal_SimpleSec      = 0x10001,
+diff -udpr doxygen/src/doctokenizer.l doxygen-patched/src/doctokenizer.l
+--- doxygen/src/doctokenizer.l	2006-11-21 15:38:32.000000000 +0700
++++ doxygen-patched/src/doctokenizer.l	2006-11-21 15:38:22.000000000 +0700
+@@ -109,6 +109,7 @@ const char *tokToString(int token)
+     case TK_NEWPARA:     return "TK_NEWPARA";
+     case TK_RCSTAG:      return "TK_RCSTAG";
+     case TK_URL:         return "TK_URL";
++    case TK_CMDPARAM:	 return "TK_CMDPARAM";
+   }
+   return "ERROR";
+ }
+@@ -367,6 +368,7 @@ REFWORD   ("#"|"::")?({ID}("."|"#"|"::"|
+ %x St_Ref2
+ %x St_IntRef
+ %x St_Text
++%x St_Command
+ %x St_SkipTitle
+ 
+ %x St_Sections
+@@ -424,8 +426,14 @@ REFWORD   ("#"|"::")?({ID}("."|"#"|"::"|
+                          g_token->name = yytext+1;
+ 			 g_token->name = g_token->name.stripWhiteSpace();
+ 			 g_token->paramDir=TokenInfo::Unspecified;
++                         BEGIN(St_Command);
+                          return TK_COMMAND;
+   		       }
++<St_Command>:{ID}      {
++			 BEGIN(St_Para);
++                         g_token->name = yytext+1;
++			 return TK_CMDPARAM;
++                       }
+ <St_Para>{PARAMIO}     { /* param [in,out] command */
+   			 g_token->name = "param";
+ 			 QString s(yytext);
+@@ -508,8 +516,8 @@ REFWORD   ("#"|"::")?({ID}("."|"#"|"::"|
+                        }
+   /********* patterns for normal words ******************/
+ 
+-<St_Para,St_Text>{WORD1} |
+-<St_Para,St_Text>{WORD2} { /* function call */ 
++<St_Para,St_Text,St_Command>{WORD1} |
++<St_Para,St_Text,St_Command>{WORD2} { /* function call */ 
+                          if (yytext[0]=='%') // strip % if present
+ 			   g_token->name = &yytext[1];
+ 			 else
+@@ -530,9 +538,11 @@ REFWORD   ("#"|"::")?({ID}("."|"#"|"::"|
+ 
+   /*******************************************************/
+ 
+-<St_Para,St_Text>{BLANK}+      |
+-<St_Para,St_Text>{BLANK}*\n{BLANK}* { /* white space */ 
++<St_Para,St_Text,St_Command>{BLANK}+      |
++<St_Para,St_Text,St_Command>{BLANK}*\n{BLANK}* { /* white space */ 
+                          g_token->chars=yytext;
++			 if (YYSTATE == St_Command)
++			    BEGIN(St_Para);
+                          return TK_WHITESPACE;
+                        }
+ <St_Text>[\\@<>&$#%~]  {

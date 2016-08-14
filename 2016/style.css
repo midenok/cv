@@ -1,0 +1,23 @@
+.book {
+  max-width: 860px;
+  padding-left: 60px;  
+}
+p {
+  text-align: justify;
+}
+.inlinemediaobject {
+  margin-left: 60px;
+  max-width: 600px; 
+}
+.synopsis {
+  font-weight: bold;
+}
+pre.programlisting {
+  background-color: #efeff5 ;
+  font-size: 90%;
+  margin-left: 60px;
+  max-width: 600px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
